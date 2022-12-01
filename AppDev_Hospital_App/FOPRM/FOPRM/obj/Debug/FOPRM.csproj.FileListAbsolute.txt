@@ -1,0 +1,6 @@
+C:\Users\mquan\OneDrive\Máy tính\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.csproj.AssemblyReference.cache
+C:\Users\mquan\OneDrive\Máy tính\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.csproj.SuggestedBindingRedirects.cache
+C:\Users\mquan\OneDrive\Máy tính\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.mainForm.resources
+C:\Users\mquan\OneDrive\Máy tính\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.Properties.Resources.resources
+C:\Users\mquan\OneDrive\Máy tính\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.csproj.GenerateResource.cache
+C:\Users\mquan\OneDrive\Máy tính\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.csproj.CoreCompileInputs.cache
