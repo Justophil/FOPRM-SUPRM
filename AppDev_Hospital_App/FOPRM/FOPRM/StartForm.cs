@@ -10,12 +10,10 @@ using System.Windows.Forms;
 
 namespace FOPRM
 {
-    public partial class mainForm : System.Windows.Forms.Form
+    public partial class StartForm : System.Windows.Forms.Form
     {
-        public mainForm()
+        public StartForm()
         {
-            StartForm start = new StartForm();
-            start.ShowDialog();
             InitializeComponent();
         }
     }
