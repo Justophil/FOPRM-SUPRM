@@ -30,15 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.startButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startButton
             // 
             this.startButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.startButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.startButton, "startButton");
             this.startButton.Name = "startButton";
             this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            resources.ApplyResources(this.exitButton, "exitButton");
+            this.exitButton.Name = "exitButton";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // StartForm
             // 
@@ -47,14 +57,11 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = global::FOPRM.Properties.Resources.Foprm;
             this.ControlBox = false;
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startButton);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "StartForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.TopMost = true;
             this.ResumeLayout(false);
 
@@ -63,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }
