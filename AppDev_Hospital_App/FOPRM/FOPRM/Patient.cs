@@ -56,13 +56,13 @@ namespace FOPRM
             Gender = gender;
         }
 
-        public string PatientId { get; set; }
-        public string Fname { get; set; }
-        public string Lname { get; set; }
-        public int Age { get; set; }
-        public char Gender { get; set; }
-        public int Condition { get; set; }
-        public string[] Diseases { get; set; }
+        public string PatientId { get { return this.patientId; } set { this.patientId = value; } }
+        public string Fname { get { return this.fname; } set { this.fname = value; } }
+        public string Lname { get { return this.lname; } set { this.lname = value; } }
+        public int Age { get { return this.age; } set { this.age = value; } }
+        public char Gender { get { return this.gender; } set { this.gender = value; } }
+        public int Condition { get { return this.condition; } set { this.condition = value; } }
+        public string[] Diseases { get { return this.diseases; } set { this.diseases = value; } }
 
         /*
          * Merge 2 profiles
@@ -81,10 +81,12 @@ namespace FOPRM
             p1.Gender = p2.Gender;
             p1.Condition = p2.Condition;
 
-            foreach (string e in p2.Diseases)
+            /*foreach (string e in p2.Diseases)
             {
                 p1.Diseases.Append(e);
             }
+            */
+            p1.Diseases = p2.Diseases;
         }
     }
 }

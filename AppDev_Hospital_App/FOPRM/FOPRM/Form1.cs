@@ -14,8 +14,6 @@ namespace FOPRM
     {
         public mainForm()
         {
-            StartForm start = new StartForm();
-            start.ShowDialog();
             InitializeComponent();
         }
     }

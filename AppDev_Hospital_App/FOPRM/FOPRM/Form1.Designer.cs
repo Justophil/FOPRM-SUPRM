@@ -38,7 +38,7 @@
             this.ClientSize = new System.Drawing.Size(506, 425);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainForm";
-            this.Text = "Foprm";
+            this.Text = "FOPRM";
             this.ResumeLayout(false);
 
         }

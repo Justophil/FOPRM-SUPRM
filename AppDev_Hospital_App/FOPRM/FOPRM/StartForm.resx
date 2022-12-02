@@ -117,4 +117,128 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="startButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 11.25pt, style=Bold</value>
+  </data>
+  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 200</value>
+  </data>
+  <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 35</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
+    <value>startButton</value>
+  </data>
+  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>449, 291</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIBwAAAEAIACYDgAAFgAAACgAAAAgAAAAOAAAAAEAIAAAAAAAAA4AAMMOAADDDgAAAAAAAAAA
+        AABXMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9YMiv/VzEr/1gyK/9XMSv/WDIr/1gyK/9XMSv/VzEr/1gyK/9YMiv/WDEr/1gyK/9YMiv/WDEs/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VTAq/1MuKf9XMSv/US0p/1YxK/9RLSn/USwp/1QvKv9WMCr/UCwp/1EtKf9VLyr/Ui4q/1Mu
+        Kv9TLin/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/WDIr/1EtKf9yQzP/mV0//0wqJ/+kZEL/v3dK/6BiQf+hYkH/YTct/3FCM/+cX0D/lVs+/5te
+        P/+BTTj/c0Qz/5hcP/9RLSn/WDIr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9YMiv/Tywp/3lJNv/djVX/h1A5/7x5S/9xQjP/yIFP/8yCUP+3cUj/vnhL/8uB
+        T//Ifk3/u3dL/+GPVf/kkFb/uHVK/04qKP9ZMyz/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1gyK/9QLCn/dUU0/9WFUf+eYEH/wXhL/7lySP+7dEn/vnZK/7t0
+        Sf/BeEv/vXVK/7ZxSP/Eekz/sG1G/5xfQP/Ad0v/Sykn/1kyLP9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9YMiv/Yjkw/2Q6Mf9ZMy7/bUEz/1Uw
+        LP9eNi//aD0y/1cxK/9tQDL/aDww/1s0LP9ZMiz/VTAq/182Lf9WMCv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/90QSv/eUQr/3pF
+        LP92Qiv/eUQs/3dDLP9uPSv/VTAr/04rKP9MKij/Tiwp/08sKf9QLCn/Uy8q/1gyK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1gyK/9RLSv/ik4t/5RU
+        Lv9/SC3/hEst/4FILf+RUi7/xW8w/59ZL/9VMCv/bUAx/3ZGNf93RzX/d0Y0/3lHNf9dNS3/Uy8q/1gy
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/WDEr/1Mv
+        K/+XVS7/XDQs/0wrK/9SLiv/SCgr/4lNLf9yQCz/UC0r/1ItKf+/d0r/v3dK/6tqRP+ua0X/sW1G/711
+        Sv9eNi3/VTAq/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9YMSv/Uy8r/5RULv9lOSz/VC8r/1QvK/9LKiv/jlAt/2s8LP9ULyv/Tyso/65rRf9fNi3/PR8j/0oo
+        J/9CIyX/qmtF/3xLN/9PKyj/WDIr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1gyK/9TLyv/llUu/2A2LP9bMyv/d0Ms/28+LP+fWi7/aTss/1UwK/9OKyj/s3BH/5dc
+        Pv98STb/d0Y1/0knJ/+paET/fEo2/08rKf9YMiv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/WDIr/1MvK/+UUy7/ajws/5pXLv+MTy3/jU8t/35HLP9WMSv/WDIr/1Iu
+        Kv9zRDT/rWtF/6RlQv/DeUz/hE84/6BiQf9+Szf/Tyso/1gyK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9YMiv/VC8r/49RLf9/SC3/ik4t/0cnK/9QLSv/UC0r/1cx
+        K/9XMSv/WDIr/1IuKf9LKSj/RSUm/2o+Mf+qa0X/oWJB/35LN/9PKyj/WDIr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1gyK/9ULyv/j1Et/35HLf+HTC3/Ui8r/1w0
+        K/9aMyv/VzEr/1cxK/9XMSv/WTMs/1w1LP9WMSr/cEIz/6VmQ/+iY0L/fks3/08rKP9YMiv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/WDIr/1QvK/+PUS3/fUct/49R
+        Lf9LKiv/VC8r/1EuK/9WMSv/VzEr/1gyK/9RLSn/Tiso/0cmJv9uQTL/qmtF/6BiQf9+Szf/Tyso/1gy
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9YMiv/Uy8r/5VU
+        Lv9lOSz/klMu/5hWLv+WVS7/jU8u/1kyK/9YMiv/Ui0p/3tJNv+2cEj/q2lF/8Z7Tf99Sjb/oWNB/35L
+        N/9PKyj/WDIr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1gx
+        K/9TLyv/lVQu/2E3LP9ULyv/Zzos/181LP+aVy7/az0s/1QwK/9PKyj/tHFI/4pUO/9uQDL/az4x/0Yl
+        Jv+qaET/fEo2/08rKP9YMiv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/WDIr/1IuK/+ZVy7/ZTks/08tK/9SLiv/SCkr/41QLf9sPSz/VC8r/0wpJ/+ua0b/bkAy/0wp
+        KP9YMiv/Tywp/6hnQ/98STb/Tysp/1gyK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9YMiv/Ui4r/3hDLP+fWi7/lFQu/5dVLv+UVC7/q2Ev/24+LP9VMCz/YDcu/7dx
+        SP9cNS3/SCcn/08sKf9AIST/qGlE/31LN/9OKyj/WDIr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9YMSv/Uy8r/100K/9jNyz/Yjcs/2I3LP9hNyz/Ui0o/4NO
+        OP/8oF3/2IdS/6RkQv+qaUT/qGhE/6tpRf/Ad0v/YDcu/1UvKv9YMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9YMSv/VTAr/1QwK/9UMCv/VDAr/1Uw
+        K/9ULyr/YDcu/3VFNP91RTT/fks3/31LN/99Szf/f0w3/2E4Lv9TLir/WDIr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9VLyr/UCwp/1AsKf9OKyj/Tiso/04rKP9OKyj/VS8q/1gyK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9YMiv/WDIr/1gyK/9YMiv/WDIr/1gyK/9YMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cx
+        K/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/1cxK/9XMSv/VzEr/wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FOPRM</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>StartForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
