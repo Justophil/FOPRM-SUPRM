@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.startButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.fadeIn = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // startButton
@@ -50,6 +52,11 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // fadeIn
+            // 
+            this.fadeIn.Enabled = true;
+            this.fadeIn.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // StartForm
             // 
             resources.ApplyResources(this, "$this");
@@ -62,7 +69,9 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "StartForm";
+            this.Opacity = 0D;
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.timer1_Tick);
             this.ResumeLayout(false);
 
         }
@@ -71,5 +80,6 @@
 
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Timer fadeIn;
     }
 }

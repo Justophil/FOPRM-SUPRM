@@ -5,19 +5,36 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.Linq;
 
 namespace FOPRM
 {
-    internal class Data
+    public class Data
     {
-        private static ArrayList patients = null;
-
+        private List<Patient> patients;
         public Data()
         {
-            patients = new ArrayList();
+            patients = new List<Patient>();
+            readFile();
         }
 
-        public ArrayList Patients { get { return patients; } set { patients = value; } }
+        public Data(Data data)
+        {
+            foreach (Patient p in data.patients)
+                patients.Add(p);
+        }
+
+        public List<Patient> Patients { get { return patients; } set { patients = value; } }
+        public void readFile()
+        {
+            //JSON
+        }
+
+        public void writeFile()
+        {
+            //JSON
+        }
 
         /*
          * @param p1 index of first patient
