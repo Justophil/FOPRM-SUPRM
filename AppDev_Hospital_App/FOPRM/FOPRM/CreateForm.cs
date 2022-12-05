@@ -28,6 +28,7 @@ namespace FOPRM
             if (!validInput()) return;
             data.addPatient(new Patient(fnameIp.Text, lnameIp.Text, (int)ageIp.Value, genIp.SelectedItem.ToString(),
                 insurIp.Text == null ? "" : insurIp.Text, passportIp.Text == null ? "" : passportIp.Text));
+            data.writeFile();
             mainForm.updateList();
         }
         

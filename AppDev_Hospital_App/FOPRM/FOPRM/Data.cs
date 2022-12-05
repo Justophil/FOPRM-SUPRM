@@ -26,9 +26,10 @@ namespace FOPRM
         }
 
         public List<Patient> Patients { get { return patients; } set { patients = value; } }
-        public void readFile()
+        public Data readFile()
         {
             //JSON
+            return this;
         }
 
         public void writeFile()
@@ -36,28 +37,6 @@ namespace FOPRM
             //JSON
         }
 
-        /*
-         * @param p1 index of first patient
-         * @paran p2 index of second patient
-         * 
-         * Rearrange the array after merged (remove the extra)
-         * 
-        */
-        /*
-        public void mergePatients(int p1, int p2)
-        {
-            Patient.merge((Patient)patients[p1], (Patient)patients[p2]);
-            removePatient(p2);
-
-            ArrayList temp = new ArrayList();
-            foreach (Patient p in patients) {
-                if (p != null)
-                    temp.Add(p);
-            }
-            Patients = temp;
-        }
-        */
-        // We already have a merge method in Patient Class
         public void addPatient(Patient p)
         {
             Patients.Add(p);

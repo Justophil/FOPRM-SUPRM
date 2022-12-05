@@ -18,6 +18,7 @@ namespace FOPRM
         Data view;
         private StartForm StartForm;
         bool ascending;
+        Printer printer;
 
         public MainForm(StartForm titleScreen)
         {
@@ -25,6 +26,8 @@ namespace FOPRM
             StartForm = titleScreen;
             data = new Data();
             view = data;
+
+            printer = new Printer(data, view);
             ascending = true;
             updateList();
         }
@@ -54,7 +57,7 @@ namespace FOPRM
         public void updateList()
         {
             listPs.Items.Clear();
-            view = data;
+            view = data.readFile();
             foreach (Patient p in view.Patients)
             {
                 listPs.Items.Add(new ListViewItem(new string[] { p.PatientId, p.Fname, p.Lname, p.Gender, "" + p.Condition }));
@@ -134,18 +137,44 @@ namespace FOPRM
 
         private void removeB_Click(object sender, EventArgs e)
         {
-            foreach (Patient p in data.Patients)
-                if (p.PatientId.Equals(listPs.SelectedItems[0].Text))
-                {
-                    data.removePatient(p);
-                    break;
-                }
+            for (int i = 0; i < listPs.SelectedItems.Count; i++)
+                foreach (Patient p in data.Patients)
+                    if (p.PatientId.Equals(listPs.SelectedItems[i].Text))
+                    {
+                        data.removePatient(p);
+                        break;
+                    }
             updateList();
         }
 
         private void mergeB_Click(object sender, EventArgs e)
         {
             new MergeForm(this, data).ShowDialog();
+        }
+
+        private void MainForm_Enter(object sender, EventArgs e)
+        {
+            listPs.SelectedIndexChanged -= listPs_SelectedIndexChanged;
+        }
+
+        private void MainForm_Leave(object sender, EventArgs e)
+        {
+            listPs.SelectedIndexChanged -= listPs_SelectedIndexChanged;
+        }
+
+        private void printB_Click(object sender, EventArgs e)
+        {
+            //if (listPs.)
+        }
+
+        private void listPs_Leave(object sender, EventArgs e)
+        {
+            listPs.SelectedItems.Clear();
+        }
+
+        private void MainForm_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

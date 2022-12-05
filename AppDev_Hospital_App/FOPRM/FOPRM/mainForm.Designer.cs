@@ -96,6 +96,7 @@
             this.printB.TabIndex = 16;
             this.printB.Text = "&Print";
             this.printB.UseVisualStyleBackColor = false;
+            this.printB.Click += new System.EventHandler(this.printB_Click);
             // 
             // mergeB
             // 
@@ -162,6 +163,7 @@
             this.listPs.View = System.Windows.Forms.View.Details;
             this.listPs.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listPs_ColumnClick);
             this.listPs.SelectedIndexChanged += new System.EventHandler(this.listPs_SelectedIndexChanged);
+            this.listPs.Leave += new System.EventHandler(this.listPs_Leave);
             // 
             // idCol
             // 
@@ -213,6 +215,9 @@
             this.Name = "MainForm";
             this.Text = "FOPRM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Click += new System.EventHandler(this.MainForm_Click);
+            this.Enter += new System.EventHandler(this.MainForm_Enter);
+            this.Leave += new System.EventHandler(this.MainForm_Leave);
             this.ResumeLayout(false);
 
         }

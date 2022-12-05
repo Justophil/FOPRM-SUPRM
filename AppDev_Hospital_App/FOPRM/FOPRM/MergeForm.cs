@@ -251,6 +251,7 @@ namespace FOPRM
 
             data.removePatient(p2);
             updateCB();
+            data.writeFile();
             mainForm.updateList();
         }
 
