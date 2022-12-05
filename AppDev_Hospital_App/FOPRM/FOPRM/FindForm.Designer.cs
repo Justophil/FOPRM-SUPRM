@@ -316,7 +316,7 @@
             this.disIp.Name = "disIp";
             this.disIp.Size = new System.Drawing.Size(300, 109);
             this.disIp.TabIndex = 36;
-            this.disIp.Text = "SEPARATE EACH BY COMMA \',\'";
+            this.disIp.Text = "SEPARATE EACH BY LINES (ENTER)";
             this.disIp.Enter += new System.EventHandler(this.disIp_Enter);
             // 
             // FindForm

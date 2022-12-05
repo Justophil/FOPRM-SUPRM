@@ -63,9 +63,9 @@ namespace FOPRM
             Patients.Add(p);
         }
 
-        public void removePatient(int p)
+        public void removePatient(Patient p)
         {
-            Patients.RemoveAt(p);
+            Patients.Remove(p);
         }
     }
 }

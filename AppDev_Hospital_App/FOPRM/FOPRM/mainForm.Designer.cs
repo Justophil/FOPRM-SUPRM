@@ -109,6 +109,7 @@
             this.mergeB.TabIndex = 17;
             this.mergeB.Text = "&Merge";
             this.mergeB.UseVisualStyleBackColor = false;
+            this.mergeB.Click += new System.EventHandler(this.mergeB_Click);
             // 
             // removeB
             // 
@@ -122,6 +123,7 @@
             this.removeB.TabIndex = 18;
             this.removeB.Text = "&Remove";
             this.removeB.UseVisualStyleBackColor = false;
+            this.removeB.Click += new System.EventHandler(this.removeB_Click);
             // 
             // border
             // 
@@ -152,7 +154,6 @@
             this.listPs.Location = new System.Drawing.Point(28, 138);
             this.listPs.MaximumSize = new System.Drawing.Size(692, 596);
             this.listPs.MinimumSize = new System.Drawing.Size(692, 596);
-            this.listPs.MultiSelect = false;
             this.listPs.Name = "listPs";
             this.listPs.Size = new System.Drawing.Size(692, 596);
             this.listPs.TabIndex = 20;

@@ -38,7 +38,7 @@ namespace FOPRM
 
         private void viewB_Click(object sender, EventArgs e)
         {
-            
+            new ViewForm(this, data, listPs.SelectedItems[0].Text).ShowDialog();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -125,10 +125,35 @@ namespace FOPRM
 
         private void listPs_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listPs.SelectedItems.Count == 0)
+            {
+                mergeB.Enabled = false;
+                viewB.Enabled = false;
+                removeB.Enabled = false;
+                printB.Enabled = false;
+                return;
+            }
+
             mergeB.Enabled = true;
             viewB.Enabled = true;
             removeB.Enabled = true;
             printB.Enabled = true;
+        }
+
+        private void removeB_Click(object sender, EventArgs e)
+        {
+            foreach (Patient p in data.Patients)
+                if (p.PatientId.Equals(listPs.SelectedItems[0].Text))
+                {
+                    data.removePatient(p);
+                    break;
+                }
+            updateList();
+        }
+
+        private void mergeB_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

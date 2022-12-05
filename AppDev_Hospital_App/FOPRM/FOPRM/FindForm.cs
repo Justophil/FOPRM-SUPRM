@@ -25,7 +25,6 @@ namespace FOPRM
 
         private void findB_Click(object sender, EventArgs e)
         {
-            string[] dis = disIp.Text.Split(',');
             List<Patient> res = new List<Patient>();
             foreach (Patient p in this.data.Patients)
             {
@@ -117,12 +116,12 @@ namespace FOPRM
                         continue;
                     }
                 }
-                if (disIp.Text.Equals("SEPARATE EACH BY COMMA ','") || disIp.Text.Length < 1);
+                if (disIp.Text.Equals("SEPARATE EACH BY LINES (ENTER)") || disIp.Text.Length < 1);
                 else
                 {
                     if (!res.Contains(p))
                         res.Add(p);
-                    foreach (string d in dis)
+                    foreach (string d in disIp.Lines)
                     {
                         if (!p.Diseases.Contains(d))
                             if (res.Contains(p))
