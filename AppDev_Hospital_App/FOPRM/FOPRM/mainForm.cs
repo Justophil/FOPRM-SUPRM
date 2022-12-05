@@ -38,7 +38,7 @@ namespace FOPRM
 
         private void viewB_Click(object sender, EventArgs e)
         {
-            new ViewForm(this, data, listPs.SelectedItems[0].Text).ShowDialog();
+            
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
