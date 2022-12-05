@@ -1,0 +1,20 @@
+Patient ID: 00002
+Codition: 0
+First Name: BB
+Last Name: BB
+Age: 0
+Gender: M
+Medical Insurance: BB
+Passport: BB
+Diseases:
+
+Patient ID: 00003
+Codition: 0
+First Name: C
+Last Name: C
+Age: 0
+Gender: M
+Medical Insurance: C
+Passport: C
+Diseases:
+

@@ -20,6 +20,7 @@ namespace FOPRM
         public ViewForm(MainForm main, Data data, string ID)
         {
             InitializeComponent();
+            MaximizeBox = false;
             mainForm = main;
             this.data = data;
             idOp.ReadOnly = true;

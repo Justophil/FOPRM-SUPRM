@@ -23,6 +23,7 @@ namespace FOPRM
         public MainForm(StartForm titleScreen)
         {
             InitializeComponent();
+            MaximizeBox = false;
             StartForm = titleScreen;
             data = new Data();
             view = data;
@@ -57,7 +58,8 @@ namespace FOPRM
         public void updateList()
         {
             listPs.Items.Clear();
-            view = data.readFile();
+            //view = data.readFile();
+            view = data;
             foreach (Patient p in view.Patients)
             {
                 listPs.Items.Add(new ListViewItem(new string[] { p.PatientId, p.Fname, p.Lname, p.Gender, "" + p.Condition }));
@@ -167,7 +169,26 @@ namespace FOPRM
 
         private void printB_Click(object sender, EventArgs e)
         {
-            printer.printBoard(view);
+            DialogResult result = MessageBox.Show("Are you sure that you want to print the data?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            
+            if (result != DialogResult.Yes) return;
+
+            if (listPs.SelectedItems.Count != 0) {
+                List<Patient> ps = new List<Patient>();
+                for (int i = 0; i < listPs.SelectedItems.Count; i++)
+                    foreach (Patient p in data.Patients)
+                    {
+                        if (p.PatientId.Equals(listPs.SelectedItems[i].Text)) {
+                            ps.Add(p);
+                            break;
+                        }
+                    }
+                printer.print(ps);
+            }
+            else    
+                printer.printBoard(view);
+
+            MessageBox.Show("Printing has been successful", "Print Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

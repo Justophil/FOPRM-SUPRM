@@ -22,10 +22,9 @@ namespace FOPRM
         public MergeForm(MainForm main, Data data)
         {
             InitializeComponent();
+            MaximizeBox = false;
             mainForm = main;
             this.data = data;
-
-            
 
             updateCB();
         }

@@ -334,7 +334,7 @@
             this.updateModeB.Name = "updateModeB";
             this.updateModeB.Size = new System.Drawing.Size(147, 33);
             this.updateModeB.TabIndex = 55;
-            this.updateModeB.Text = "Update Mode";
+            this.updateModeB.Text = "Edit Mode";
             this.updateModeB.UseVisualStyleBackColor = false;
             this.updateModeB.Click += new System.EventHandler(this.updateModeB_Click);
             // 

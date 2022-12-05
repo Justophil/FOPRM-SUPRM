@@ -18,6 +18,7 @@ namespace FOPRM
         public FindForm(MainForm main, Data data)
         {
             InitializeComponent();
+            MaximizeBox = false;
             this.main = main;
             this.data = data;
             genIp.SelectedIndex = 0;

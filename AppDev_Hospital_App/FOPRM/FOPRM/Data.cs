@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace FOPRM
 {
@@ -29,13 +30,37 @@ namespace FOPRM
         public List<Patient> Patients { get { return patients; } set { patients = value; } }
         public Data readFile()
         {
-            //JsonTextReader json = new JsonTextFileReader();
+            try
+            {
+                string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
+                if (File.Exists(path)) File.Create(path);
+                using (JsonTextReader jr = new JsonTextReader(new StreamReader(path)))
+                {
+                    while (jr.Read())
+                    {
+                        if (jr.Value != null)
+                        {
+                            string[] rawData = jr.Value.ToString().Split(',');
+                        }
+                    }
+                }
+            }
+            catch (IOException e) {
+            }
             return this;
         }
 
         public void writeFile()
         {
-            //JSON
+            try
+            {
+                string path = @"..\..\..\PatientRecordsData.json";
+                JsonTextWriter jw = new JsonTextWriter(new StreamWriter(path));
+            }
+            catch (IOException e)
+            {
+
+            }
         }
 
         public void addPatient(Patient p)

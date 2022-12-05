@@ -18,6 +18,7 @@ namespace FOPRM
         public CreateForm(MainForm Form, Data data)
         {
             InitializeComponent();
+            MaximizeBox = false;
             mainForm = Form;
             this.data = data;
             genIp.SelectedIndex = 0;
