@@ -79,10 +79,10 @@
             this.conLb.BackColor = System.Drawing.Color.Lavender;
             this.conLb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.conLb.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conLb.Location = new System.Drawing.Point(12, 148);
+            this.conLb.Location = new System.Drawing.Point(12, 146);
             this.conLb.Multiline = true;
             this.conLb.Name = "conLb";
-            this.conLb.Size = new System.Drawing.Size(94, 27);
+            this.conLb.Size = new System.Drawing.Size(94, 30);
             this.conLb.TabIndex = 43;
             this.conLb.TabStop = false;
             this.conLb.Text = "Condition:";
@@ -126,7 +126,7 @@
             this.genLb.BackColor = System.Drawing.Color.Lavender;
             this.genLb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.genLb.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genLb.Location = new System.Drawing.Point(238, 101);
+            this.genLb.Location = new System.Drawing.Point(238, 148);
             this.genLb.Multiline = true;
             this.genLb.Name = "genLb";
             this.genLb.Size = new System.Drawing.Size(102, 27);
@@ -176,7 +176,7 @@
             this.lnameLb.CausesValidation = false;
             this.lnameLb.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lnameLb.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnameLb.Location = new System.Drawing.Point(12, 101);
+            this.lnameLb.Location = new System.Drawing.Point(12, 100);
             this.lnameLb.Multiline = true;
             this.lnameLb.Name = "lnameLb";
             this.lnameLb.ReadOnly = true;
@@ -244,10 +244,10 @@
             this.lnameOp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lnameOp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lnameOp.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnameOp.Location = new System.Drawing.Point(130, 101);
+            this.lnameOp.Location = new System.Drawing.Point(130, 99);
             this.lnameOp.Multiline = true;
             this.lnameOp.Name = "lnameOp";
-            this.lnameOp.Size = new System.Drawing.Size(84, 28);
+            this.lnameOp.Size = new System.Drawing.Size(316, 28);
             this.lnameOp.TabIndex = 48;
             // 
             // genOp
@@ -256,7 +256,7 @@
             this.genOp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.genOp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.genOp.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genOp.Location = new System.Drawing.Point(362, 101);
+            this.genOp.Location = new System.Drawing.Point(362, 148);
             this.genOp.Multiline = true;
             this.genOp.Name = "genOp";
             this.genOp.Size = new System.Drawing.Size(84, 28);
@@ -268,10 +268,10 @@
             this.conOp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.conOp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.conOp.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conOp.Location = new System.Drawing.Point(130, 148);
+            this.conOp.Location = new System.Drawing.Point(130, 146);
             this.conOp.Multiline = true;
             this.conOp.Name = "conOp";
-            this.conOp.Size = new System.Drawing.Size(316, 27);
+            this.conOp.Size = new System.Drawing.Size(84, 30);
             this.conOp.TabIndex = 50;
             // 
             // insOp
@@ -316,6 +316,8 @@
             this.UpdateB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.UpdateB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateB.Location = new System.Drawing.Point(299, 549);
+            this.UpdateB.MaximumSize = new System.Drawing.Size(147, 33);
+            this.UpdateB.MinimumSize = new System.Drawing.Size(147, 33);
             this.UpdateB.Name = "UpdateB";
             this.UpdateB.Size = new System.Drawing.Size(147, 33);
             this.UpdateB.TabIndex = 54;
@@ -361,14 +363,14 @@
             // conIp
             // 
             this.conIp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conIp.Location = new System.Drawing.Point(130, 148);
+            this.conIp.Location = new System.Drawing.Point(130, 146);
             this.conIp.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
             this.conIp.Name = "conIp";
-            this.conIp.Size = new System.Drawing.Size(80, 29);
+            this.conIp.Size = new System.Drawing.Size(84, 29);
             this.conIp.TabIndex = 60;
             // 
             // genIp
@@ -379,7 +381,7 @@
             this.genIp.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.genIp.Location = new System.Drawing.Point(362, 99);
+            this.genIp.Location = new System.Drawing.Point(362, 146);
             this.genIp.Name = "genIp";
             this.genIp.Size = new System.Drawing.Size(84, 30);
             this.genIp.TabIndex = 61;

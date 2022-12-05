@@ -55,7 +55,7 @@ namespace FOPRM
             passportOp.Text = pa.Passport;
             disOp.Text = "";
             foreach (string d in pa.Diseases)
-                disOp.Text += d + "\n";
+                disOp.Text += d + ", ";
         }
 
         public void setMode()
@@ -63,18 +63,18 @@ namespace FOPRM
             if (isViewMode)
             {
                 ageOp.Visible = true;
-                ageIp.Value = 0;
+                ageIp.Value = pa.Age;
                 ageIp.Visible = false;
 
                 conOp.Visible = true;
                 conIp.Visible = false;
-                conIp.Value = 0;
+                conIp.Value = pa.Condition;
 
                 genOp.Visible = true;
                 genIp.Visible = false;
-                genIp.SelectedIndex = 0;
+                genIp.SelectedItem = pa.Gender;
 
-                UpdateB.Enabled = true;
+                UpdateB.Enabled = false;
                 ageOp.ReadOnly = true;
                 fnameOp.ReadOnly = true;
                 lnameOp.ReadOnly = true;
@@ -93,6 +93,7 @@ namespace FOPRM
                 genOp.Visible = false;
                 genIp.Visible = true;
 
+                UpdateB.Enabled = true;
                 ageOp.ReadOnly = false;
                 fnameOp.ReadOnly = false;
                 lnameOp.ReadOnly = false;

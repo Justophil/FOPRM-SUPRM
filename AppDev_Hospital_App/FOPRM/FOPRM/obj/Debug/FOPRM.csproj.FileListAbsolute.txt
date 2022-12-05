@@ -64,3 +64,4 @@ C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Deb
 C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.CreateForm.resources
 C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.FindForm.resources
 C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.ViewForm.resources
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.MergeForm.resources

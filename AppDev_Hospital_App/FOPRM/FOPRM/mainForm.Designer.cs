@@ -100,10 +100,11 @@
             // mergeB
             // 
             this.mergeB.BackColor = System.Drawing.Color.Lavender;
-            this.mergeB.Enabled = false;
             this.mergeB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.mergeB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mergeB.Location = new System.Drawing.Point(505, 19);
+            this.mergeB.MaximumSize = new System.Drawing.Size(139, 35);
+            this.mergeB.MinimumSize = new System.Drawing.Size(139, 35);
             this.mergeB.Name = "mergeB";
             this.mergeB.Size = new System.Drawing.Size(139, 35);
             this.mergeB.TabIndex = 17;

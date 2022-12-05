@@ -312,6 +312,8 @@
             this.disIp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disIp.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.disIp.Location = new System.Drawing.Point(125, 184);
+            this.disIp.MaximumSize = new System.Drawing.Size(300, 109);
+            this.disIp.MinimumSize = new System.Drawing.Size(300, 109);
             this.disIp.Multiline = true;
             this.disIp.Name = "disIp";
             this.disIp.Size = new System.Drawing.Size(300, 109);

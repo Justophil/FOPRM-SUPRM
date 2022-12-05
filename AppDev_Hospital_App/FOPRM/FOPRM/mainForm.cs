@@ -51,11 +51,6 @@ namespace FOPRM
             new FindForm(this, data).ShowDialog();
         }
 
-        private void sortB_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void updateList()
         {
             listPs.Items.Clear();
@@ -127,14 +122,11 @@ namespace FOPRM
         {
             if (listPs.SelectedItems.Count == 0)
             {
-                mergeB.Enabled = false;
                 viewB.Enabled = false;
                 removeB.Enabled = false;
                 printB.Enabled = false;
                 return;
             }
-
-            mergeB.Enabled = true;
             viewB.Enabled = true;
             removeB.Enabled = true;
             printB.Enabled = true;
@@ -153,7 +145,7 @@ namespace FOPRM
 
         private void mergeB_Click(object sender, EventArgs e)
         {
-
+            new MergeForm(this, data).ShowDialog();
         }
     }
 }
