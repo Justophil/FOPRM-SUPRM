@@ -131,7 +131,7 @@ namespace FOPRM
         {
             if (isViewMode)
             {
-                notifLb.Text = "Update Mode On!";
+                notifLb.Text = "Edit Mode On!";
                 updateModeB.Text = "View Mode";
                 isViewMode = false;
                 setMode();
@@ -139,7 +139,7 @@ namespace FOPRM
             else
             {
                 notifLb.Text = "";
-                updateModeB.Text = "Update Mode";
+                updateModeB.Text = "Edit Mode";
                 isViewMode = true;
                 setMode();
             }

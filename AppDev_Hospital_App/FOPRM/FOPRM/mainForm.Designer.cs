@@ -87,7 +87,6 @@
             // printB
             // 
             this.printB.BackColor = System.Drawing.Color.Lavender;
-            this.printB.Enabled = false;
             this.printB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.printB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printB.Location = new System.Drawing.Point(505, 82);
@@ -163,7 +162,6 @@
             this.listPs.View = System.Windows.Forms.View.Details;
             this.listPs.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listPs_ColumnClick);
             this.listPs.SelectedIndexChanged += new System.EventHandler(this.listPs_SelectedIndexChanged);
-            this.listPs.Leave += new System.EventHandler(this.listPs_Leave);
             // 
             // idCol
             // 

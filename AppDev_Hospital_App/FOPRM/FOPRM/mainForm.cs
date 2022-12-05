@@ -27,7 +27,7 @@ namespace FOPRM
             data = new Data();
             view = data;
 
-            printer = new Printer(data, view);
+            printer = new Printer();
             ascending = true;
             updateList();
         }
@@ -127,12 +127,10 @@ namespace FOPRM
             {
                 viewB.Enabled = false;
                 removeB.Enabled = false;
-                printB.Enabled = false;
                 return;
             }
             viewB.Enabled = true;
             removeB.Enabled = true;
-            printB.Enabled = true;
         }
 
         private void removeB_Click(object sender, EventArgs e)
@@ -162,19 +160,14 @@ namespace FOPRM
             listPs.SelectedIndexChanged -= listPs_SelectedIndexChanged;
         }
 
-        private void printB_Click(object sender, EventArgs e)
-        {
-            //if (listPs.)
-        }
-
-        private void listPs_Leave(object sender, EventArgs e)
-        {
-            listPs.SelectedItems.Clear();
-        }
-
         private void MainForm_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void printB_Click(object sender, EventArgs e)
+        {
+            printer.printBoard(view);
         }
     }
 }

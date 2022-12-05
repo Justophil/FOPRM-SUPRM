@@ -43,7 +43,7 @@ namespace FOPRM
         {
             if (fnameIp.Text == null || fnameIp.Text.Length == 0) return false;
             if (lnameIp.Text == null || lnameIp.Text.Length == 0) return false;
-            if ((int)ageIp.Value <= 0) return false;
+            if ((int)ageIp.Value < 0) return false;
             if (genIp.SelectedIndex != 0 && genIp.SelectedIndex != 1) return false;
             if ((insurIp.Text == null || insurIp.Text.Length == 0) && (passportIp.Text == null || passportIp.Text.Length == 0)) return false;
             return true;

@@ -113,26 +113,26 @@ namespace FOPRM
             disIp.Items.Clear();
 
             //insert options
-            ageIp.Items.Add(p1.Age);
-            ageIp.Items.Add(p2.Age);
+            ageIp.Items.Add("(P1) " + p1.Age);
+            ageIp.Items.Add("(P2) " + p2.Age);
 
-            genIp.Items.Add(p1.Gender);
-            genIp.Items.Add(p2.Gender);
+            genIp.Items.Add("(P1) " + p1.Gender);
+            genIp.Items.Add("(P2) " + p2.Gender);
 
-            fnameIp.Items.Add(p1.Fname);
-            fnameIp.Items.Add(p2.Fname);
+            fnameIp.Items.Add("(P1) " + p1.Fname);
+            fnameIp.Items.Add("(P2) " + p2.Fname);
             
-            lnameIp.Items.Add(p1.Lname);
-            lnameIp.Items.Add(p2.Lname);
+            lnameIp.Items.Add("(P1) " + p1.Lname);
+            lnameIp.Items.Add("(P2) " + p2.Lname);
 
-            conIp.Items.Add(p1.Condition);
-            conIp.Items.Add(p2.Condition);
+            conIp.Items.Add("(P1) " + p1.Condition);
+            conIp.Items.Add("(P2) " + p2.Condition);
             
-            insIp.Items.Add(p1.MedInsurance);
-            insIp.Items.Add(p2.MedInsurance);
+            insIp.Items.Add("(P1) " + p1.MedInsurance);
+            insIp.Items.Add("(P2) " + p2.MedInsurance);
 
-            passportIp.Items.Add(p1.Passport);
-            passportIp.Items.Add(p2.Passport);
+            passportIp.Items.Add("(P1) " + p1.Passport);
+            passportIp.Items.Add("(P2) " + p2.Passport);
 
             disIp.Items.Add("P1 Diseases");
             disIp.Items.Add("P2 Diseases");
@@ -141,49 +141,49 @@ namespace FOPRM
 
         private void ageIp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ageOp.Text = "" + ageIp.SelectedItem;
+            ageOp.Text = "" + ageIp.SelectedItem.ToString().Substring(5);
             if (isAllOptsSelected()) 
                 resPanel.Visible = true;
         }
 
         private void genIp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            genOp.Text = "" + genIp.SelectedItem;
+            genOp.Text = "" + genIp.SelectedItem.ToString().Substring(5);
             if (isAllOptsSelected())
                 resPanel.Visible = true;
         }
 
         private void fnameIp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fnameOp.Text = "" + fnameIp.SelectedItem;
+            fnameOp.Text = "" + fnameIp.SelectedItem.ToString().Substring(5);
             if (isAllOptsSelected())
                 resPanel.Visible = true;
         }
 
         private void lnameIp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lnameOp.Text = "" + lnameIp.SelectedItem;
+            lnameOp.Text = "" + lnameIp.SelectedItem.ToString().Substring(5);
             if (isAllOptsSelected())
                 resPanel.Visible = true;
         }
 
         private void conIp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            conOp.Text = "" + conIp.SelectedItem;
+            conOp.Text = "" + conIp.SelectedItem.ToString().Substring(5);
             if (isAllOptsSelected())
                 resPanel.Visible = true;
         }
 
         private void insIp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            insOp.Text = "" + insIp.SelectedItem;
+            insOp.Text = "" + insIp.SelectedItem.ToString().Substring(5);
             if (isAllOptsSelected())
                 resPanel.Visible = true;
         }
 
         private void passportIp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            passportOp.Text = "" + passportIp.SelectedItem;
+            passportOp.Text = "" + passportIp.SelectedItem.ToString().Substring(5);
             if (isAllOptsSelected())
                 resPanel.Visible = true;
         }

@@ -10,21 +10,24 @@ namespace FOPRM
     internal class Printer
     {
         string path;
-        Data data;
-        Data view;
-        public Printer(Data data, Data view)
+        public Printer()
         {
-            this.data = data;
-            this.view = view;
-            path = @"C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\Documents\";
+            path = @"C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\Documents";
         }
 
         public string makeFile()
         {
-            return Path.Combine(path, DateTime.Now.ToString().Replace("/", "-").Replace(":", "'") + ".txt");
+            string s = DateTime.Now.ToString();
+            string[] times = new string[] { "h", "m" };
+            for (int i = 0; i < 2; i++)
+            {
+                s = s.Substring(0, s.IndexOf("/")) + "_" + s.Substring(s.IndexOf("/") + 1);
+                s = s.Substring(0, s.IndexOf(":")) + times[i] + s.Substring(s.IndexOf(":") + 1);
+            }
+            return Path.Combine(path, s + ".txt");
         }
 
-        public void print()
+        public void print(Patient[] ps)
         {
             path += DateTime.Now + ".txt";
 
@@ -35,7 +38,7 @@ namespace FOPRM
             }
         }
 
-        public void printBoard()
+        public void printBoard(Data view)
         {
             using (FileStream fs = File.Open(makeFile(), FileMode.OpenOrCreate))
             {
@@ -55,6 +58,7 @@ namespace FOPRM
                         fw.WriteLine("\t" + d);
                     fw.WriteLine("\n");
                 }
+                fs.Close();
             }
         }
     }

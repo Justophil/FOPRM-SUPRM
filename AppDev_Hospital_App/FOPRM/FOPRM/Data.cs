@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
+using System.IO;
 
 namespace FOPRM
 {
@@ -28,7 +29,7 @@ namespace FOPRM
         public List<Patient> Patients { get { return patients; } set { patients = value; } }
         public Data readFile()
         {
-            //JSON
+            //JsonTextReader json = new JsonTextFileReader();
             return this;
         }
 
