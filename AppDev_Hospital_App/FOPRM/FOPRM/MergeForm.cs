@@ -60,6 +60,7 @@ namespace FOPRM
             if (p1CB.SelectedItem == null || p2CB.SelectedItem == null || p2CB.SelectedItem == p1CB.SelectedItem)
             {
                 optPanel.Visible = false;
+                resPanel.Visible = false;
                 return;
             }
 
@@ -72,6 +73,7 @@ namespace FOPRM
             if (p1CB.SelectedItem == null || p2CB.SelectedItem == null || p2CB.SelectedItem == p1CB.SelectedItem)
             {
                 optPanel.Visible = false;
+                resPanel.Visible = false;
                 return;
             }
 
@@ -218,51 +220,21 @@ namespace FOPRM
             p1.Gender = genOp.Text;
             p1.MedInsurance = insOp.Text;
             p1.Passport = passportOp.Text;
-
-            p1.Diseases.Clear();
             
-            switch (disIp.SelectedItem)
+            switch (disIp.SelectedIndex)
             {
-                case "P1 Diseases":
-                    fnameTb.Text = "hi";
-                    foreach (String s in p1.Diseases)
-                        p1.Diseases.Add(s);
+                case 0:
                     break;
-                case "P2 Diseases":
-                    fnameTb.Text = "elo";
+                case 1:
+                    p1.Diseases.Clear();
                     foreach (String s in p2.Diseases)
                         p1.Diseases.Add(s);
                     break;
                 default:
-                    fnameTb.Text = "wat";
-                    foreach (String s in p1.Diseases)
-                        p1.Diseases.Add(s);
                     foreach (String s in p2.Diseases)
                         p1.Diseases.Add(s);
                     break;
             }
-            /**
-            if (disIp.SelectedIndex == 2)
-            {
-                foreach (String s in p1.Diseases)
-                    p1.Diseases.Add(s);
-                foreach (String s in p2.Diseases)
-                    p1.Diseases.Add(s);
-            }
-            else if (disIp.SelectedIndex == 0)
-            {
-                foreach (String s in p1.Diseases)
-                    p1.Diseases.Add(s);
-            }
-            else
-            {
-                foreach (String s in p2.Diseases)
-                    p1.Diseases.Add(s);
-            }
-            */
-
-            //foreach (String s in disOp.Text.Replace(", ", ",").Split(','))
-            //    p1.Diseases.Add(s);
 
             for (int i = 0; i < data.Patients.Count; i++)
             {

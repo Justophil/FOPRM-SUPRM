@@ -325,7 +325,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(49)))), ((int)(((byte)(88)))));
             this.ClientSize = new System.Drawing.Size(434, 344);
             this.Controls.Add(this.disIp);
             this.Controls.Add(this.disLb);

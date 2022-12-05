@@ -140,7 +140,7 @@
             this.listPs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listPs.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.listPs.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listPs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listPs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.idCol,
@@ -197,7 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(49)))), ((int)(((byte)(88)))));
             this.ClientSize = new System.Drawing.Size(744, 758);
             this.Controls.Add(this.listPs);
             this.Controls.Add(this.border);
