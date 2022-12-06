@@ -9,6 +9,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
 using System.IO;
 using Newtonsoft.Json;
+using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using System.Net.NetworkInformation;
+using System.Data.SqlClient;
 
 namespace FOPRM
 {
@@ -17,8 +21,7 @@ namespace FOPRM
         private List<Patient> patients;
         public Data()
         {
-            patients = new List<Patient>();
-            readFile();
+            patients = readFile().Patients;
         }
 
         public Data(Data data)
@@ -26,41 +29,46 @@ namespace FOPRM
             foreach (Patient p in data.patients)
                 patients.Add(p);
         }
-
-        public List<Patient> Patients { get { return patients; } set { patients = value; } }
-        public Data readFile()
+        public Data(List<Patient> data)
         {
-            try
-            {
-                string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
-                if (File.Exists(path)) File.Create(path);
-                using (JsonTextReader jr = new JsonTextReader(new StreamReader(path)))
-                {
-                    while (jr.Read())
-                    {
-                        if (jr.Value != null)
-                        {
-                            string[] rawData = jr.Value.ToString().Split(',');
-                        }
-                    }
-                }
-            }
-            catch (IOException e) {
-            }
-            return this;
+            patients = data;
         }
 
+        public List<Patient> Patients { get { return patients; } set { patients = value; } }
+        // This shit aint working
+        public Data readFile()
+        {
+            Data res = null;
+            try
+            {
+                // When app run the message box is displayed in a loop
+                string rawData;
+                string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
+                using (StreamReader jr = new StreamReader(path))
+                {
+                    rawData = jr.ReadToEnd();
+                    MessageBox.Show(rawData);
+                }
+                var resu = JsonConvert.DeserializeObject<Data>(rawData);
+                res = (Data)resu;
+            }
+            catch (IOException) { }
+            return new Data(new List<Patient>());
+        }
+        // this shit aint working
         public void writeFile()
         {
             try
             {
-                string path = @"..\..\..\PatientRecordsData.json";
-                JsonTextWriter jw = new JsonTextWriter(new StreamWriter(path));
-            }
-            catch (IOException e)
-            {
+                string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
 
+                using (JsonTextWriter jw = new JsonTextWriter(new StreamWriter(path)))
+                {
+                    
+                }
+                //jw.
             }
+            catch (IOException e) { }
         }
 
         public void addPatient(Patient p)

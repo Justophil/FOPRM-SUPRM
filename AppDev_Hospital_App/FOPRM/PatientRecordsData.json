@@ -1,0 +1,5 @@
+{
+    "patients": [
+        {"patientId": 123,"fname": "Phil","lname": "Xyz","medInsurance": "sample Med ins","passport": "12345ABCDEF","age": 18,"gender": "M","condition": 5,"diseases": ["Autistic", "Dyslexia"]}
+    ]
+}

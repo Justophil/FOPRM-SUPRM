@@ -26,6 +26,7 @@ namespace FOPRM
             MaximizeBox = false;
             StartForm = titleScreen;
             data = new Data();
+            MessageBox.Show("" + data.Patients.Count);
             view = data;
 
             printer = new Printer();
@@ -60,9 +61,14 @@ namespace FOPRM
             listPs.Items.Clear();
             //view = data.readFile();
             view = data;
-            foreach (Patient p in view.Patients)
+            // test
+            if (view == null)
+                MessageBox.Show("asdsad");
+            for (int i = 0; i < view.Patients.Count; i++)
             {
-                listPs.Items.Add(new ListViewItem(new string[] { p.PatientId, p.Fname, p.Lname, p.Gender, "" + p.Condition }));
+                // test
+                MessageBox.Show("" + view.Patients.Count);
+                listPs.Items.Add(new ListViewItem(new string[] { view.Patients[i].PatientId, view.Patients[i].Fname , view.Patients[i].Lname, view.Patients[i].Gender, "" + view.Patients[i].Condition }));
             }
         }
 
@@ -70,9 +76,9 @@ namespace FOPRM
         {
             listPs.Items.Clear();
             view = data;
-            foreach (Patient p in view.Patients)
+            for (int i = 0; i < view.Patients.Count; i++)
             {
-                listPs.Items.Add(new ListViewItem(new string[] { p.PatientId, p.Fname, p.Lname, p.Gender, "" + p.Condition }));
+                listPs.Items.Add(new ListViewItem(new string[] { view.Patients[i].PatientId, view.Patients[i].Fname, view.Patients[i].Lname, view.Patients[i].Gender, "" + view.Patients[i].Condition }));
             }
         }
 
