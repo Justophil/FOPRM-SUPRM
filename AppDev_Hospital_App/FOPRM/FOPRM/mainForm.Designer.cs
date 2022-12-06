@@ -162,6 +162,7 @@
             this.listPs.View = System.Windows.Forms.View.Details;
             this.listPs.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listPs_ColumnClick);
             this.listPs.SelectedIndexChanged += new System.EventHandler(this.listPs_SelectedIndexChanged);
+            this.listPs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listPs_KeyDown);
             // 
             // idCol
             // 
@@ -213,8 +214,8 @@
             this.Name = "MainForm";
             this.Text = "FOPRM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-            this.Click += new System.EventHandler(this.MainForm_Click);
             this.Enter += new System.EventHandler(this.MainForm_Enter);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.Leave += new System.EventHandler(this.MainForm_Leave);
             this.ResumeLayout(false);
 

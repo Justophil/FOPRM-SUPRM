@@ -147,7 +147,6 @@
             this.lnameOp.Name = "lnameOp";
             this.lnameOp.Size = new System.Drawing.Size(238, 27);
             this.lnameOp.TabIndex = 74;
-            this.lnameOp.TextChanged += new System.EventHandler(this.lnameOp_TextChanged);
             // 
             // fnameOp
             // 

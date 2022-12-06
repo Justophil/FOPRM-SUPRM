@@ -28,10 +28,11 @@ namespace FOPRM
             view = Data.readFile();
             printer = new Printer();
             ascending = true;
+            this.KeyDown += MainForm_KeyDown;
+            this.KeyPreview = true;
+
             updateList(Data.readFile());
         }
-
-        public Data View { get; set; }
 
         private void createB_Click(object sender, EventArgs e)
         {
@@ -166,11 +167,6 @@ namespace FOPRM
             listPs.SelectedIndexChanged -= listPs_SelectedIndexChanged;
         }
 
-        private void MainForm_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void printB_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure that you want to print the data?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -193,6 +189,16 @@ namespace FOPRM
                 printer.printBoard(view);
 
             MessageBox.Show("Printing has been successful", "Print Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void listPs_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.F5) updateList();
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5) updateList();
         }
     }
 }

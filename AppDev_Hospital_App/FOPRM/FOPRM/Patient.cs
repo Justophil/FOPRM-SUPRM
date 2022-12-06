@@ -34,7 +34,7 @@ namespace FOPRM
             Passport = passport;
 
             diseases = new List<string>();
-            condition = 0;
+            condition = 1;
         }
 
         public string PatientId { get { return this.patientId; } }

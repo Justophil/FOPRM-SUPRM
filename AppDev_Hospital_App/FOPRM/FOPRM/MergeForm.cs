@@ -253,10 +253,5 @@ namespace FOPRM
             Data.writeFile(data);
             mainForm.updateList();
         }
-
-        private void lnameOp_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
