@@ -118,7 +118,6 @@ namespace FOPRM
                         continue;
                     }
                 }
-                foreach (Patient p1 in res) MessageBox.Show(p1.PatientId);
                 if (conIp.Value < 1) ;
                 else
                 {
