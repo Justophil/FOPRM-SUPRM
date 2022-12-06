@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindForm));
             this.genIp = new System.Windows.Forms.ComboBox();
             this.ageIp = new System.Windows.Forms.NumericUpDown();
             this.passportIp = new System.Windows.Forms.TextBox();
@@ -346,6 +347,7 @@
             this.Controls.Add(this.ageLb);
             this.Controls.Add(this.lnameLb);
             this.Controls.Add(this.fnameLb);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FindForm";
             this.Text = "Find";
             ((System.ComponentModel.ISupportInitialize)(this.ageIp)).EndInit();
