@@ -1,0 +1,20 @@
+Patient ID: 00001
+Codition: 0
+First Name: AA
+Last Name: SS
+Age: 6
+Gender: M
+Medical Insurance: 123
+Passport: ACD
+Diseases:
+
+Patient ID: 00002
+Codition: 0
+First Name: BB
+Last Name: RR
+Age: 6
+Gender: F
+Medical Insurance: 456
+Passport: BEF
+Diseases:
+

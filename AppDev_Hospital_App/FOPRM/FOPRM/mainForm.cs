@@ -26,7 +26,6 @@ namespace FOPRM
             MaximizeBox = false;
             StartForm = titleScreen;
             view = Data.readFile();
-
             printer = new Printer();
             ascending = true;
             updateList(Data.readFile());
@@ -41,7 +40,8 @@ namespace FOPRM
 
         private void viewB_Click(object sender, EventArgs e)
         {
-            new ViewForm(this, listPs.SelectedItems[0].Text).ShowDialog();
+            if (listPs.SelectedItems.Count != 0)
+                new ViewForm(this, listPs.SelectedItems[0].Text).ShowDialog();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -67,7 +67,6 @@ namespace FOPRM
 
         public void updateList(Data data)
         {
-            foreach (Patient p in data.Patients) MessageBox.Show(p.PatientId);
             listPs.Items.Clear();
             view = data;
             for (int i = 0; i < view.Patients.Count; i++)
@@ -137,14 +136,19 @@ namespace FOPRM
 
         private void removeB_Click(object sender, EventArgs e)
         {
+            view = Data.readFile();
             for (int i = 0; i < listPs.SelectedItems.Count; i++)
-                foreach (Patient p in Data.readFile().Patients)
+            {
+                foreach (Patient p in view.Patients) {
                     if (p.PatientId.Equals(listPs.SelectedItems[i].Text))
                     {
-                        Data.readFile().removePatient(p);
+                        view.Patients.Remove(p);
                         break;
                     }
-            updateList();
+                }
+            }
+            Data.writeFile(view);
+            updateList(Data.readFile());
         }
 
         private void mergeB_Click(object sender, EventArgs e)

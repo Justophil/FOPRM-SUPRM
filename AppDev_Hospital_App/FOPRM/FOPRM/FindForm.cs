@@ -27,13 +27,15 @@ namespace FOPRM
         private void findB_Click(object sender, EventArgs e)
         {
             List<Patient> res = new List<Patient>();
+            
             foreach (Patient p in this.data.Patients)
             {
                 if (idIp == null || idIp.Text.Length < 1) ;
-                else 
+                else
                 {
-                    if (p.PatientId.Equals(idIp.Text))
+                    if (p.PatientId.Equals(idIp.Text)) {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else 
                     {
                         if (res.Contains(p)) res.Remove(p);
@@ -43,8 +45,9 @@ namespace FOPRM
                 if (fnameIp == null || fnameIp.Text.Length < 1) ;
                 else
                 {
-                    if (p.Fname.Equals(fnameIp.Text))
+                    if (p.Fname.Equals(fnameIp.Text)) {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else
                     {
                         if (res.Contains(p)) res.Remove(p);
@@ -55,7 +58,9 @@ namespace FOPRM
                 else
                 {
                     if (p.Lname.Equals(lnameIp.Text))
+                    {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else
                     {
                         if (res.Contains(p)) res.Remove(p);
@@ -65,8 +70,9 @@ namespace FOPRM
                 if (insurIp.Text == null || insurIp.Text.Length < 1) ;
                 else
                 {
-                    if (p.MedInsurance.Equals(insurIp.Text))
+                    if (p.MedInsurance.Equals(insurIp.Text)) {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else
                     {
                         if (res.Contains(p)) res.Remove(p);
@@ -77,7 +83,9 @@ namespace FOPRM
                 else
                 {
                     if (p.Passport.Equals(passportIp.Text))
+                    {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else
                     {
                         if (res.Contains(p)) res.Remove(p);
@@ -88,29 +96,36 @@ namespace FOPRM
                 else
                 {
                     if (p.Age == ageIp.Value)
+                    {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else
                     {
                         if (res.Contains(p)) res.Remove(p);
                         continue;
                     }
                 }
-                if (genIp == null || genIp.Text.Length < 1) ;
+                if (genIp == null || genIp.SelectedItem.ToString().Length < 1) ;
                 else
                 {
                     if (p.Gender.Equals(genIp.SelectedItem.ToString()))
+                    {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else
                     {
                         if (res.Contains(p)) res.Remove(p);
                         continue;
                     }
                 }
+                foreach (Patient p1 in res) MessageBox.Show(p1.PatientId);
                 if (conIp.Value < 1) ;
                 else
                 {
                     if (p.Condition == conIp.Value)
+                    {
                         if (!res.Contains(p)) res.Add(p);
+                    }
                     else
                     {
                         if (res.Contains(p)) res.Remove(p);
@@ -131,7 +146,6 @@ namespace FOPRM
                     }
                 }
             }
-            
             main.updateList(new Data() { Patients = res });
         }
 

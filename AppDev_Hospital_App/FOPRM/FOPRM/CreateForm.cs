@@ -14,7 +14,7 @@ namespace FOPRM
     {
         MainForm mainForm;
         Data data;
-        private static int nextId = 1;
+        private static int nextId = Int32.Parse(Data.readFile().Patients[Data.readFile().Patients.Count - 1].PatientId) + 1;
 
         public CreateForm(MainForm Form, Data data)
         {
@@ -30,7 +30,7 @@ namespace FOPRM
             if (!validInput()) return;
             data.addPatient(new Patient(String.Format("{0:00000}", nextId++), fnameIp.Text, lnameIp.Text, (int)ageIp.Value, genIp.SelectedItem.ToString(),
                 insurIp.Text == null ? "" : insurIp.Text, passportIp.Text == null ? "" : passportIp.Text));
-
+            MessageBox.Show(data.Patients.Count + "");
             Data.writeFile(data);
             mainForm.updateList(Data.readFile());
         }

@@ -1,0 +1,10 @@
+Patient ID: 00002
+Codition: 0
+First Name: QWEQ
+Last Name: ASDSAD
+Age: 0
+Gender: M
+Medical Insurance: ASDA
+Passport: ASD
+Diseases:
+

@@ -32,7 +32,6 @@ namespace FOPRM
         }
 
         public List<Patient> Patients { get { return patients; } set { patients = value; } }
-        // This shit aint working
         public static Data readFile()
         {
             try
@@ -48,18 +47,47 @@ namespace FOPRM
 
             return new Data(new List<Patient>());
         }
-        // this shit aint working
         public static void writeFile(Data data)
         {
             try
             {
+                JArray json = new JArray();
+                //MessageBox.Show(data.Patients.Count + "");
+                for (int i = 0; i < data.Patients.Count; i++)
+                {
+                    if (data.Patients[i].Diseases.Count == 0)
+                    {
+                        //MessageBox.Show(i + "");
+                        //MessageBox.Show(data.Patients[i].ToString());
+                        json.Add(new JObject(new JProperty("patientId", data.Patients[i].PatientId),
+                        new JProperty("fname", data.Patients[i].Fname),
+                        new JProperty("lname", data.Patients[i].Lname),
+                        new JProperty("age", data.Patients[i].Age),
+                        new JProperty("condition", data.Patients[i].Condition),
+                        new JProperty("gender", data.Patients[i].Gender),
+                        new JProperty("medInsurance", data.Patients[i].MedInsurance),
+                        new JProperty("passport", data.Patients[i].Passport),
+                        new JProperty("diseases", new List<string>())));
+                    }
+                    else
+                    {
+                        json.Add(new JObject(new JProperty("patientId", data.Patients[i].PatientId),
+                        new JProperty("fname", data.Patients[i].Fname),
+                        new JProperty("lname", data.Patients[i].Lname),
+                        new JProperty("age", data.Patients[i].Age),
+                        new JProperty("condition", data.Patients[i].Condition),
+                        new JProperty("gender", data.Patients[i].Gender),
+                        new JProperty("medInsurance", data.Patients[i].MedInsurance),
+                        new JProperty("passport", data.Patients[i].Passport),
+                        new JProperty("diseases", data.Patients[i].Diseases)));
+                    }
+                }
                 using (JsonTextWriter jw = new JsonTextWriter(new StreamWriter(path)))
                 {
-                    
+                    json.WriteTo(jw);
                 }
-                //jw.
             }
-            catch (IOException e) { }
+            catch (IOException) { }
         }
 
         public void addPatient(Patient p)

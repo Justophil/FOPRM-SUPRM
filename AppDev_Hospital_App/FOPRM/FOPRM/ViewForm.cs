@@ -37,11 +37,8 @@ namespace FOPRM
         {
             this.pa = null;
             foreach (Patient p in data) {
-
-            MessageBox.Show(p.PatientId + " " + p.Fname);
             if (p.PatientId.Equals(ID))
             {
-                MessageBox.Show("elo");
                 pa = p;
                 break;
             }
@@ -131,7 +128,8 @@ namespace FOPRM
             }
 
             DisplayProfile();
-            mainForm.updateList();
+            Data.writeFile(new Data(data));
+            mainForm.updateList(new Data(data));
         }
 
         private void updateModeB_Click(object sender, EventArgs e)
