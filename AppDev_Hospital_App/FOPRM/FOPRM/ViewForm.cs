@@ -13,16 +13,18 @@ namespace FOPRM
     public partial class ViewForm : Form
     {
         MainForm mainForm;
-        Data data;
+        List<Patient> data;
+
         bool isViewMode = true;
         Patient pa = null;
 
-        public ViewForm(MainForm main, Data data, string ID)
+        public ViewForm(MainForm main, string ID)
         {
             InitializeComponent();
             MaximizeBox = false;
+            
             mainForm = main;
-            this.data = data;
+            this.data = Data.readFile().Patients;
             idOp.ReadOnly = true;
 
             setPatient(ID);
@@ -34,12 +36,16 @@ namespace FOPRM
         public void setPatient(string ID)
         {
             this.pa = null;
-            foreach (Patient p in data.Patients)
-                if (p.PatientId.Equals(ID))
-                {
-                    pa = p;
-                    break;
-                }
+            foreach (Patient p in data) {
+
+            MessageBox.Show(p.PatientId + " " + p.Fname);
+            if (p.PatientId.Equals(ID))
+            {
+                MessageBox.Show("elo");
+                pa = p;
+                break;
+            }
+        }
         }
 
         public void DisplayProfile()

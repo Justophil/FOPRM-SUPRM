@@ -14,6 +14,7 @@ namespace FOPRM
     {
         MainForm mainForm;
         Data data;
+        private static int nextId = 1;
 
         public CreateForm(MainForm Form, Data data)
         {
@@ -27,10 +28,11 @@ namespace FOPRM
         private void createB_Click(object sender, EventArgs e)
         {
             if (!validInput()) return;
-            data.addPatient(new Patient(fnameIp.Text, lnameIp.Text, (int)ageIp.Value, genIp.SelectedItem.ToString(),
+            data.addPatient(new Patient(String.Format("{0:00000}", nextId++), fnameIp.Text, lnameIp.Text, (int)ageIp.Value, genIp.SelectedItem.ToString(),
                 insurIp.Text == null ? "" : insurIp.Text, passportIp.Text == null ? "" : passportIp.Text));
-            data.writeFile();
-            mainForm.updateList();
+
+            Data.writeFile(data);
+            mainForm.updateList(Data.readFile());
         }
         
         private void clearInput()

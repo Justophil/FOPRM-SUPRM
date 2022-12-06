@@ -25,24 +25,23 @@ namespace FOPRM
             InitializeComponent();
             MaximizeBox = false;
             StartForm = titleScreen;
-            data = new Data();
-            view = data;
+            view = Data.readFile();
 
             printer = new Printer();
             ascending = true;
-            updateList();
+            updateList(Data.readFile());
         }
 
         public Data View { get; set; }
 
         private void createB_Click(object sender, EventArgs e)
         {
-            new CreateForm(this, data).ShowDialog();
+            new CreateForm(this, Data.readFile()).ShowDialog();
         }
 
         private void viewB_Click(object sender, EventArgs e)
         {
-            new ViewForm(this, data, listPs.SelectedItems[0].Text).ShowDialog();
+            new ViewForm(this, listPs.SelectedItems[0].Text).ShowDialog();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -52,13 +51,14 @@ namespace FOPRM
 
         private void findB_Click(object sender, EventArgs e)
         {
-            new FindForm(this, data).ShowDialog();
+            new FindForm(this, Data.readFile()).ShowDialog();
         }
 
         public void updateList()
         {
             listPs.Items.Clear();
-            view = data;
+            view = Data.readFile();
+
             for (int i = 0; i < view.Patients.Count; i++)
             {
                 listPs.Items.Add(new ListViewItem(new string[] { view.Patients[i].PatientId, view.Patients[i].Fname , view.Patients[i].Lname, view.Patients[i].Gender, "" + view.Patients[i].Condition }));
@@ -67,6 +67,7 @@ namespace FOPRM
 
         public void updateList(Data data)
         {
+            foreach (Patient p in data.Patients) MessageBox.Show(p.PatientId);
             listPs.Items.Clear();
             view = data;
             for (int i = 0; i < view.Patients.Count; i++)
@@ -137,10 +138,10 @@ namespace FOPRM
         private void removeB_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < listPs.SelectedItems.Count; i++)
-                foreach (Patient p in data.Patients)
+                foreach (Patient p in Data.readFile().Patients)
                     if (p.PatientId.Equals(listPs.SelectedItems[i].Text))
                     {
-                        data.removePatient(p);
+                        Data.readFile().removePatient(p);
                         break;
                     }
             updateList();
@@ -148,7 +149,7 @@ namespace FOPRM
 
         private void mergeB_Click(object sender, EventArgs e)
         {
-            new MergeForm(this, data).ShowDialog();
+            new MergeForm(this, Data.readFile()).ShowDialog();
         }
 
         private void MainForm_Enter(object sender, EventArgs e)
@@ -175,7 +176,7 @@ namespace FOPRM
             if (listPs.SelectedItems.Count != 0) {
                 List<Patient> ps = new List<Patient>();
                 for (int i = 0; i < listPs.SelectedItems.Count; i++)
-                    foreach (Patient p in data.Patients)
+                    foreach (Patient p in Data.readFile().Patients)
                     {
                         if (p.PatientId.Equals(listPs.SelectedItems[i].Text)) {
                             ps.Add(p);

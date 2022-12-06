@@ -15,7 +15,6 @@ namespace FOPRM
     {
 
         //--------------------------
-        private static int nextId = 1;
         private string patientId;
         private string fname;
         private string lname;
@@ -26,9 +25,9 @@ namespace FOPRM
         private int condition;
         private List<string> diseases;
 
-        public Patient(string fname, string lname, int age, string gender, string medInsuracne, string passport)
+        public Patient(string patientID, string fname, string lname, int age, string gender, string medInsuracne, string passport)
         {
-            patientId = String.Format("{0:00000}", nextId++);
+            this.patientId = patientID;
             Fname = fname;
             Lname = lname;
             Age = age;

@@ -19,18 +19,13 @@ namespace FOPRM
     public class Data
     {
         private List<Patient> patients;
-        string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
+        private static string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
         public Data()
         {
-            //patients = readFile().Patients;
-            patients = new List<Patient>();
+            patients = readFile().Patients;
+            //patients = new List<Patient>();
         }
 
-        public Data(Data data)
-        {
-            foreach (Patient p in data.patients)
-                patients.Add(p);
-        }
         public Data(List<Patient> data)
         {
             patients = data;
@@ -38,39 +33,23 @@ namespace FOPRM
 
         public List<Patient> Patients { get { return patients; } set { patients = value; } }
         // This shit aint working
-        public Data readFile()
+        public static Data readFile()
         {
-
-            List<Patient> data = new List<Patient>();
             try
             {
-                // When app run the message box is displayed in a loop
-                /*
-                string rawData;
-                using (StreamReader jr = new StreamReader(path))
-                {
-                    rawData = jr.ReadToEnd();
-                    MessageBox.Show(rawData);
-                    
-                }
-                
-                var resu = JsonConvert.DeserializeObject(rawData);
-                res = (Data)resu;
-                */
                 using (StreamReader sr = new StreamReader(path))
                 {
                     string json = sr.ReadToEnd();
                     List<Patient> items = JsonConvert.DeserializeObject<List<Patient>>(json);
-                    foreach (Patient p in items)
-                        data.Add(p);
+                    return items != null ? new Data(items) : new Data(new List<Patient>());
                 }
             }
             catch (IOException) { }
 
-            return new Data(data);
+            return new Data(new List<Patient>());
         }
         // this shit aint working
-        public void writeFile()
+        public static void writeFile(Data data)
         {
             try
             {
