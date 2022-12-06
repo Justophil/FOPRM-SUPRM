@@ -219,7 +219,7 @@
             this.ageOp.BackColor = System.Drawing.Color.GhostWhite;
             this.ageOp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ageOp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.ageOp.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageOp.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageOp.Location = new System.Drawing.Point(362, 11);
             this.ageOp.Multiline = true;
             this.ageOp.Name = "ageOp";
@@ -267,7 +267,7 @@
             this.conOp.BackColor = System.Drawing.Color.GhostWhite;
             this.conOp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.conOp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.conOp.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conOp.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conOp.Location = new System.Drawing.Point(130, 146);
             this.conOp.Multiline = true;
             this.conOp.Name = "conOp";
@@ -350,7 +350,7 @@
             // ageIp
             // 
             this.ageIp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageIp.Location = new System.Drawing.Point(362, 9);
+            this.ageIp.Location = new System.Drawing.Point(362, 12);
             this.ageIp.Maximum = new decimal(new int[] {
             150,
             0,
@@ -363,7 +363,7 @@
             // conIp
             // 
             this.conIp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conIp.Location = new System.Drawing.Point(130, 146);
+            this.conIp.Location = new System.Drawing.Point(130, 147);
             this.conIp.Maximum = new decimal(new int[] {
             5,
             0,

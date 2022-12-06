@@ -19,9 +19,11 @@ namespace FOPRM
     public class Data
     {
         private List<Patient> patients;
+        string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
         public Data()
         {
-            patients = readFile().Patients;
+            //patients = readFile().Patients;
+            patients = new List<Patient>();
         }
 
         public Data(Data data)
@@ -38,30 +40,40 @@ namespace FOPRM
         // This shit aint working
         public Data readFile()
         {
-            Data res = null;
+
+            List<Patient> data = new List<Patient>();
             try
             {
                 // When app run the message box is displayed in a loop
+                /*
                 string rawData;
-                string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
                 using (StreamReader jr = new StreamReader(path))
                 {
                     rawData = jr.ReadToEnd();
                     MessageBox.Show(rawData);
+                    
                 }
-                var resu = JsonConvert.DeserializeObject<Data>(rawData);
+                
+                var resu = JsonConvert.DeserializeObject(rawData);
                 res = (Data)resu;
+                */
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string json = sr.ReadToEnd();
+                    List<Patient> items = JsonConvert.DeserializeObject<List<Patient>>(json);
+                    foreach (Patient p in items)
+                        data.Add(p);
+                }
             }
             catch (IOException) { }
-            return new Data(new List<Patient>());
+
+            return new Data(data);
         }
         // this shit aint working
         public void writeFile()
         {
             try
             {
-                string path = Path.GetFullPath(@"..\..\..\PatientRecordsData.json");
-
                 using (JsonTextWriter jw = new JsonTextWriter(new StreamWriter(path)))
                 {
                     

@@ -24,7 +24,7 @@ namespace FOPRM
                 s = s.Substring(0, s.IndexOf("/")) + "_" + s.Substring(s.IndexOf("/") + 1);
                 s = s.Substring(0, s.IndexOf(":")) + times[i] + s.Substring(s.IndexOf(":") + 1);
             }
-            s = s.Substring(0, s.LastIndexOf(" ")) + "s " + s.Substring(s.LastIndexOf("P"));
+            s = s.Substring(0, s.LastIndexOf(" ")) + "s " + s.Substring(s.Length - 2);
             return Path.Combine(path, s + ".txt");
         }
 

@@ -1,0 +1,10 @@
+Patient ID: 00001
+Codition: 0
+First Name: AA
+Last Name: AA
+Age: 1
+Gender: M
+Medical Insurance: AA
+Passport: AA
+Diseases:
+

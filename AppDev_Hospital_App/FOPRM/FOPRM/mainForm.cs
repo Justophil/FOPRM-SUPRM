@@ -26,7 +26,6 @@ namespace FOPRM
             MaximizeBox = false;
             StartForm = titleScreen;
             data = new Data();
-            MessageBox.Show("" + data.Patients.Count);
             view = data;
 
             printer = new Printer();
@@ -59,15 +58,9 @@ namespace FOPRM
         public void updateList()
         {
             listPs.Items.Clear();
-            //view = data.readFile();
             view = data;
-            // test
-            if (view == null)
-                MessageBox.Show("asdsad");
             for (int i = 0; i < view.Patients.Count; i++)
             {
-                // test
-                MessageBox.Show("" + view.Patients.Count);
                 listPs.Items.Add(new ListViewItem(new string[] { view.Patients[i].PatientId, view.Patients[i].Fname , view.Patients[i].Lname, view.Patients[i].Gender, "" + view.Patients[i].Condition }));
             }
         }
