@@ -52,12 +52,10 @@ namespace FOPRM
         }
         private void CreateForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
         }
 
         private void CreateForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void fnameIp_Enter(object sender, EventArgs e)

@@ -42,6 +42,8 @@
             this.lnameCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.genCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.conCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.helpB = new System.Windows.Forms.Button();
+            this.refreshB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createB
@@ -49,7 +51,7 @@
             this.createB.BackColor = System.Drawing.Color.Lavender;
             this.createB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.createB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createB.Location = new System.Drawing.Point(87, 19);
+            this.createB.Location = new System.Drawing.Point(42, 24);
             this.createB.Name = "createB";
             this.createB.Size = new System.Drawing.Size(139, 35);
             this.createB.TabIndex = 10;
@@ -62,7 +64,7 @@
             this.findB.BackColor = System.Drawing.Color.Lavender;
             this.findB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.findB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findB.Location = new System.Drawing.Point(297, 19);
+            this.findB.Location = new System.Drawing.Point(241, 24);
             this.findB.Name = "findB";
             this.findB.Size = new System.Drawing.Size(139, 35);
             this.findB.TabIndex = 11;
@@ -76,7 +78,7 @@
             this.viewB.Enabled = false;
             this.viewB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.viewB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewB.Location = new System.Drawing.Point(87, 82);
+            this.viewB.Location = new System.Drawing.Point(42, 87);
             this.viewB.Name = "viewB";
             this.viewB.Size = new System.Drawing.Size(139, 35);
             this.viewB.TabIndex = 15;
@@ -89,7 +91,7 @@
             this.printB.BackColor = System.Drawing.Color.Lavender;
             this.printB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.printB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printB.Location = new System.Drawing.Point(505, 82);
+            this.printB.Location = new System.Drawing.Point(447, 86);
             this.printB.Name = "printB";
             this.printB.Size = new System.Drawing.Size(139, 35);
             this.printB.TabIndex = 16;
@@ -102,7 +104,7 @@
             this.mergeB.BackColor = System.Drawing.Color.Lavender;
             this.mergeB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.mergeB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mergeB.Location = new System.Drawing.Point(505, 19);
+            this.mergeB.Location = new System.Drawing.Point(447, 23);
             this.mergeB.MaximumSize = new System.Drawing.Size(139, 35);
             this.mergeB.MinimumSize = new System.Drawing.Size(139, 35);
             this.mergeB.Name = "mergeB";
@@ -118,7 +120,7 @@
             this.removeB.Enabled = false;
             this.removeB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.removeB.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeB.Location = new System.Drawing.Point(297, 82);
+            this.removeB.Location = new System.Drawing.Point(241, 87);
             this.removeB.Name = "removeB";
             this.removeB.Size = new System.Drawing.Size(139, 35);
             this.removeB.TabIndex = 18;
@@ -130,9 +132,9 @@
             // 
             this.border.BackColor = System.Drawing.Color.Transparent;
             this.border.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.border.Location = new System.Drawing.Point(90, 66);
+            this.border.Location = new System.Drawing.Point(45, 71);
             this.border.Name = "border";
-            this.border.Size = new System.Drawing.Size(550, 2);
+            this.border.Size = new System.Drawing.Size(650, 2);
             this.border.TabIndex = 19;
             // 
             // listPs
@@ -152,11 +154,11 @@
             this.listPs.FullRowSelect = true;
             this.listPs.GridLines = true;
             this.listPs.HideSelection = false;
-            this.listPs.Location = new System.Drawing.Point(28, 138);
-            this.listPs.MaximumSize = new System.Drawing.Size(692, 596);
-            this.listPs.MinimumSize = new System.Drawing.Size(692, 596);
+            this.listPs.Location = new System.Drawing.Point(24, 144);
+            this.listPs.MaximumSize = new System.Drawing.Size(692, 620);
+            this.listPs.MinimumSize = new System.Drawing.Size(692, 620);
             this.listPs.Name = "listPs";
-            this.listPs.Size = new System.Drawing.Size(692, 596);
+            this.listPs.Size = new System.Drawing.Size(692, 620);
             this.listPs.TabIndex = 20;
             this.listPs.UseCompatibleStateImageBehavior = false;
             this.listPs.View = System.Windows.Forms.View.Details;
@@ -193,13 +195,43 @@
             this.conCol.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.conCol.Width = 90;
             // 
+            // helpB
+            // 
+            this.helpB.BackColor = System.Drawing.Color.Lavender;
+            this.helpB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.helpB.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpB.Location = new System.Drawing.Point(637, 23);
+            this.helpB.MaximumSize = new System.Drawing.Size(139, 35);
+            this.helpB.Name = "helpB";
+            this.helpB.Size = new System.Drawing.Size(63, 35);
+            this.helpB.TabIndex = 21;
+            this.helpB.Text = "&Help";
+            this.helpB.UseVisualStyleBackColor = false;
+            this.helpB.Click += new System.EventHandler(this.helpB_Click);
+            // 
+            // refreshB
+            // 
+            this.refreshB.BackColor = System.Drawing.Color.Lavender;
+            this.refreshB.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.refreshB.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshB.Location = new System.Drawing.Point(637, 87);
+            this.refreshB.MaximumSize = new System.Drawing.Size(139, 35);
+            this.refreshB.Name = "refreshB";
+            this.refreshB.Size = new System.Drawing.Size(63, 35);
+            this.refreshB.TabIndex = 22;
+            this.refreshB.Text = "Refresh";
+            this.refreshB.UseVisualStyleBackColor = false;
+            this.refreshB.Click += new System.EventHandler(this.refreshB_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(49)))), ((int)(((byte)(88)))));
-            this.ClientSize = new System.Drawing.Size(744, 758);
+            this.ClientSize = new System.Drawing.Size(744, 791);
+            this.Controls.Add(this.refreshB);
+            this.Controls.Add(this.helpB);
             this.Controls.Add(this.listPs);
             this.Controls.Add(this.border);
             this.Controls.Add(this.removeB);
@@ -209,11 +241,12 @@
             this.Controls.Add(this.findB);
             this.Controls.Add(this.createB);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(760, 797);
-            this.MinimumSize = new System.Drawing.Size(760, 797);
+            this.MaximumSize = new System.Drawing.Size(760, 830);
+            this.MinimumSize = new System.Drawing.Size(760, 830);
             this.Name = "MainForm";
             this.Text = "FOPRM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Enter += new System.EventHandler(this.MainForm_Enter);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.Leave += new System.EventHandler(this.MainForm_Leave);
@@ -235,6 +268,8 @@
         private System.Windows.Forms.ColumnHeader lnameCol;
         private System.Windows.Forms.ColumnHeader genCol;
         private System.Windows.Forms.ColumnHeader conCol;
+        private System.Windows.Forms.Button helpB;
+        private System.Windows.Forms.Button refreshB;
     }
 }
 

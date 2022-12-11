@@ -1,1 +1,1 @@
-[{"patientId":"00001","fname":"AA","lname":"AA","age":0,"condition":1,"gender":"M","medInsurance":"AA","passport":"AA","diseases":[]},{"patientId":"00002","fname":"BB","lname":"BB","age":0,"condition":1,"gender":"M","medInsurance":"BB","passport":"BB","diseases":[]}]
+[{"patientId":"00001","fname":"AA","lname":"AA","age":0,"condition":1,"gender":"M","medInsurance":"AA","passport":"AA","diseases":["ASD, ","ASD"]},{"patientId":"00002","fname":"BB","lname":"BB","age":0,"condition":1,"gender":"M","medInsurance":"BB","passport":"BB","diseases":["DSA","DASZXC","ZXCZXVASD"]}]

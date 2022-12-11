@@ -243,3 +243,4 @@ C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\S
 C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\System.Text.Json.xml
 C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\System.ValueTuple.xml
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.UserManual.resources

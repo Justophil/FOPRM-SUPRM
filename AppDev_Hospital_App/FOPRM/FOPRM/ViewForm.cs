@@ -59,7 +59,7 @@ namespace FOPRM
             passportOp.Text = pa.Passport;
             disOp.Text = "";
             foreach (string d in pa.Diseases)
-                disOp.Text += d + ", ";
+                disOp.Text += $"{d}|";
         }
 
         public void setMode()
@@ -121,10 +121,21 @@ namespace FOPRM
             pa.MedInsurance = insOp.Text;
             pa.Passport = passportOp.Text;
 
+            foreach (string d in disOp.Lines)
+            {
+                if (d.Length > 0) continue;
+                if (!pa.Diseases.Contains(d.Substring(0, d.Contains('|') ? d.IndexOf('|') : d.Length)))
+                {
+                    DisplayProfile();
+                    Data.writeFile(new Data(data));
+                    mainForm.updateList(new Data(data));
+                    break;
+                }
+            }
             pa.Diseases.Clear();
             foreach (string d in disOp.Lines)
             {
-                pa.Diseases.Add(d);
+                pa.Diseases.Add(d.Substring(0, d.Contains('|') ? d.IndexOf('|') : d.Length));
             }
 
             DisplayProfile();

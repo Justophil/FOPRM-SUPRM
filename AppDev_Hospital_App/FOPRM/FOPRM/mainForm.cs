@@ -13,7 +13,6 @@ namespace FOPRM
 {
     public partial class MainForm : System.Windows.Forms.Form
     {
-
         Data data;
         Data view;
         private StartForm StartForm;
@@ -36,23 +35,27 @@ namespace FOPRM
 
         private void createB_Click(object sender, EventArgs e)
         {
-            new CreateForm(this, Data.readFile()).ShowDialog();
+            new CreateForm(this, Data.readFile()).Show();
         }
 
         private void viewB_Click(object sender, EventArgs e)
         {
             if (listPs.SelectedItems.Count != 0)
-                new ViewForm(this, listPs.SelectedItems[0].Text).ShowDialog();
+                new ViewForm(this, listPs.SelectedItems[0].Text).Show();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            for (int i = Application.OpenForms.Count - 1; i != 0; i = Application.OpenForms.Count - 1)
+            {
+                Application.OpenForms[i].Close();
+            }
             StartForm.Visible = true;
         }
 
         private void findB_Click(object sender, EventArgs e)
         {
-            new FindForm(this, Data.readFile()).ShowDialog();
+            new FindForm(this, Data.readFile()).Show();
         }
 
         public void updateList()
@@ -62,7 +65,7 @@ namespace FOPRM
 
             for (int i = 0; i < view.Patients.Count; i++)
             {
-                listPs.Items.Add(new ListViewItem(new string[] { view.Patients[i].PatientId, view.Patients[i].Fname , view.Patients[i].Lname, view.Patients[i].Gender, "" + view.Patients[i].Condition }));
+                listPs.Items.Add(new ListViewItem(new string[] { view.Patients[i].PatientId, view.Patients[i].Fname, view.Patients[i].Lname, view.Patients[i].Gender, "" + view.Patients[i].Condition }));
             }
         }
 
@@ -140,7 +143,8 @@ namespace FOPRM
             view = Data.readFile();
             for (int i = 0; i < listPs.SelectedItems.Count; i++)
             {
-                foreach (Patient p in view.Patients) {
+                foreach (Patient p in view.Patients)
+                {
                     if (p.PatientId.Equals(listPs.SelectedItems[i].Text))
                     {
                         view.Patients.Remove(p);
@@ -154,7 +158,7 @@ namespace FOPRM
 
         private void mergeB_Click(object sender, EventArgs e)
         {
-            new MergeForm(this, Data.readFile()).ShowDialog();
+            new MergeForm(this, Data.readFile()).Show();
         }
 
         private void MainForm_Enter(object sender, EventArgs e)
@@ -170,22 +174,24 @@ namespace FOPRM
         private void printB_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure that you want to print the data?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            
+
             if (result != DialogResult.Yes) return;
 
-            if (listPs.SelectedItems.Count != 0) {
+            if (listPs.SelectedItems.Count != 0)
+            {
                 List<Patient> ps = new List<Patient>();
                 for (int i = 0; i < listPs.SelectedItems.Count; i++)
                     foreach (Patient p in Data.readFile().Patients)
                     {
-                        if (p.PatientId.Equals(listPs.SelectedItems[i].Text)) {
+                        if (p.PatientId.Equals(listPs.SelectedItems[i].Text))
+                        {
                             ps.Add(p);
                             break;
                         }
                     }
                 printer.print(ps);
             }
-            else    
+            else
                 printer.printBoard(view);
 
             MessageBox.Show("Printing has been successful", "Print Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -199,6 +205,21 @@ namespace FOPRM
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5) updateList();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshB_Click(object sender, EventArgs e)
+        {
+            updateList();
+        }
+
+        private void helpB_Click(object sender, EventArgs e)
+        {
+            new UserManual().Show();
         }
     }
 }

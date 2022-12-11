@@ -171,11 +171,22 @@
     <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManual.Designer.cs">
+      <DependentUpon>UserManual.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewForm.cs">
       <SubType>Form</SubType>
@@ -197,19 +208,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="StartForm.en-CA.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManual.resx">
+      <DependentUpon>UserManual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewForm.resx">
       <DependentUpon>ViewForm.cs</DependentUpon>
@@ -242,6 +251,66 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legends0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printBoard0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upgrade0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upgrade1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

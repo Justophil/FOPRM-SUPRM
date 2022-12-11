@@ -250,7 +250,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateForm_FormClosed);
-            this.Load += new System.EventHandler(this.CreateForm_Load);
             this.Enter += new System.EventHandler(this.createB_Click);
             ((System.ComponentModel.ISupportInitialize)(this.ageIp)).EndInit();
             this.ResumeLayout(false);
