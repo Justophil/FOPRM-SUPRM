@@ -417,6 +417,8 @@
             this.Controls.Add(this.lnameLb);
             this.Controls.Add(this.fnameLb);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(474, 633);
+            this.MinimumSize = new System.Drawing.Size(474, 633);
             this.Name = "ViewForm";
             this.Text = "Profile";
             ((System.ComponentModel.ISupportInitialize)(this.ageIp)).EndInit();

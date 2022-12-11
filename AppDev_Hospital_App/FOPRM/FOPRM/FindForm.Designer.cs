@@ -348,6 +348,8 @@
             this.Controls.Add(this.lnameLb);
             this.Controls.Add(this.fnameLb);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(450, 383);
+            this.MinimumSize = new System.Drawing.Size(450, 383);
             this.Name = "FindForm";
             this.Text = "Find";
             ((System.ComponentModel.ISupportInitialize)(this.ageIp)).EndInit();

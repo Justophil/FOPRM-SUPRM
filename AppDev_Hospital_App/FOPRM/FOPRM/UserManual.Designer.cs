@@ -131,6 +131,8 @@
             this.Controls.Add(this.textLb);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(664, 830);
+            this.MinimumSize = new System.Drawing.Size(664, 830);
             this.Name = "UserManual";
             this.Text = "UserManual";
             this.Load += new System.EventHandler(this.UserManual_Load);

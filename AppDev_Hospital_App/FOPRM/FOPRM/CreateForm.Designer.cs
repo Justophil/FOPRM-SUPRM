@@ -246,6 +246,8 @@
             this.Controls.Add(this.lnameLb);
             this.Controls.Add(this.fnameLb);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(449, 232);
+            this.MinimumSize = new System.Drawing.Size(449, 232);
             this.Name = "CreateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create";

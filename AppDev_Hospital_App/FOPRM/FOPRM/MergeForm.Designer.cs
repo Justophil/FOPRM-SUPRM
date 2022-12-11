@@ -694,6 +694,8 @@
             this.Controls.Add(this.mergeB);
             this.Controls.Add(this.textBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(679, 602);
+            this.MinimumSize = new System.Drawing.Size(679, 602);
             this.Name = "MergeForm";
             this.Text = "MergeForm";
             this.optPanel.ResumeLayout(false);
