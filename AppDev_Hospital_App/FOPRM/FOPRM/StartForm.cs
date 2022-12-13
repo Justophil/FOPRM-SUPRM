@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Xml;
 
 namespace FOPRM
 {
@@ -17,6 +19,7 @@ namespace FOPRM
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
         }
         // start the main form hiding the current
         private void startButton_Click(object sender, EventArgs e)
@@ -40,5 +43,6 @@ namespace FOPRM
             }
             Opacity += 0.2;
         }
+
     }
 }

@@ -59,10 +59,10 @@
             // 
             // StartForm
             // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(49)))), ((int)(((byte)(88)))));
             this.BackgroundImage = global::FOPRM.Properties.Resources.Foprm;
+            resources.ApplyResources(this, "$this");
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startButton);

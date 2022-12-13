@@ -244,3 +244,12 @@ C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\S
 C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\2152339\Desktop\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\System.ValueTuple.xml
 C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.UserManual.resources
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\en\FOPRM.resources.dll
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\fr\FOPRM.resources.dll
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\bin\Debug\vi\FOPRM.resources.dll
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.StartForm.en.resources
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.StartForm.fr.resources
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\FOPRM.StartForm.vi.resources
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\en\FOPRM.resources.dll
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\fr\FOPRM.resources.dll
+C:\Users\kanek\Desktop\Foprm\FOPRM-SUPRM\AppDev_Hospital_App\FOPRM\FOPRM\obj\Debug\vi\FOPRM.resources.dll
